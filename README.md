@@ -1,4 +1,4 @@
-# mpv.net English Learning Pack v2
+# mpv.net English Learning Pack
 
 ## Purpose
 This covers the configuration for mpv.net, a video player for Windows.
