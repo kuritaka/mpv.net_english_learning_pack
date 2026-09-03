@@ -23,7 +23,7 @@ This covers the configuration for mpv.net, a video player for Windows.
 | Input | Action |
 |---|---|
 | Left click | Play / pause |
-| Esc | Do nothing |
+| Esc | Exit fullscreen (does nothing when windowed) |
 | Left Arrow | Seek backward 5 seconds |
 | Right Arrow | Seek forward 5 seconds |
 | Up Arrow | Seek forward 10 seconds |
