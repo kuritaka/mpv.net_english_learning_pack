@@ -9,44 +9,12 @@ This covers the configuration for mpv.net, a video player for Windows.
 <img src="screenshots/friends.png" width="800">
 
 
-## Added Features
-
-- Left click on the video: play / pause
-- `Esc`: ignored, so it does not quit mpv.net
-- Always-visible bottom status:
-
-```text
-00:12:34 / 00:42:10        Speed: 1.0x
-```
-
-## Installation
-
-Place `portable_config` next to `mpvnet.exe`.
-
-```text
-mpv.net/
-├─ mpvnet.exe
-└─ portable_config/
-   ├─ mpv.conf
-   ├─ input.conf
-   ├─ scripts/
-   │  ├─ english-subs.lua
-   │  └─ always-status.lua
-   └─ script-opts/
-      └─ english-subs.conf
-```
-
-No PowerShell command is required.
 
 ## Default Layout
 
 - Video 50%
 - Subtitle panel 50%
 - Previous 2 / current / next 2
-- Font size 27
-- Current subtitle uses the same font size
-- Not bold
-- No `▶` marker
 - Current subtitle highlighted by color only
 - `max_chars=55`
 
@@ -77,3 +45,51 @@ current time / duration        Speed: current speed
 ```
 
 at the bottom center of the window.
+
+
+
+## Installation
+
+### Option 1: Download the ready-to-use package
+
+Download the archive from the [Releases page](https://github.com/kuritaka/mpv.net_english_learning_pack/releases), extract it, and run `mpvnet.exe`.
+
+### Option 2: Use a portable mpv.net download
+
+1. Download and extract a **portable** build of [mpv.net](https://github.com/mpvnet-player/mpv.net/releases).
+2. Copy this repository's `portable_config` directory next to `mpvnet.exe`.
+
+```text
+mpv.net/
+├─ mpvnet.exe
+└─ portable_config/
+   ├─ mpv.conf
+   ├─ input.conf
+   ├─ scripts/
+   │  ├─ english-subs.lua
+   │  └─ always-status.lua
+   └─ script-opts/
+      └─ english-subs.conf
+```
+
+
+### Option 3: Install with winget
+
+Install mpv.net:
+
+```powershell
+winget install --id mpv.net --exact
+```
+
+Then copy the contents of this repository's `portable_config` directory to `%APPDATA%\mpv.net` (normally `C:\Users\<username>\AppData\Roaming\mpv.net`).
+
+mpv.net searches `portable_config` beside `mpvnet.exe` before `%APPDATA%\mpv.net`; do not use both locations for this pack at the same time.
+
+## Video and Subtitle Files
+
+Place the video and its external subtitle file in the same directory. With the default `sub-auto=fuzzy` setting, a matching `.srt` subtitle is loaded automatically; for example:
+
+```text
+lesson.mp4
+lesson.en.srt
+```
