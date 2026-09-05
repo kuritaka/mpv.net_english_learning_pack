@@ -8,7 +8,7 @@ local o = {
     next_count = 2,
     font_size = 27,
     current_font_size = 27,
-    max_chars = 55,
+    max_chars = 65,
     line_gap = 14,
     block_gap = 22,
     margin_x = 28,
@@ -56,11 +56,13 @@ local function parse_time(t)
 end
 
 local function clean_text(s)
-    s = s:gsub("<br%s*/?>", "\n")
+    s = s:gsub("<br%s*/?>", " ")
          :gsub("<[^>]->", "")
          :gsub("{\\[^}]-}", "")
          :gsub("\r", "")
-         :gsub("\n%s*\n+", "\n")
+         :gsub("\n+", " ")
+         :gsub("%s+", " ")
+
     return trim(s)
 end
 
@@ -200,7 +202,7 @@ local function render()
     local panel_left = math.floor(w*(1-o.panel_ratio))
     local x = panel_left + o.margin_x
     local panel_width = w - panel_left - o.margin_x*2
-    local chars = math.max(24, math.floor(o.max_chars*(panel_width/math.max(420,panel_width))))
+    local chars = o.max_chars
 
     local first = math.max(1, idx-o.prev_count)
     local last = math.min(#cues, idx+o.next_count)
