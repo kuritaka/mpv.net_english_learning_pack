@@ -17,8 +17,10 @@ Windowsの動画再生プレイヤーmpv.netの設定です。
 - 動画 50%
 - 字幕 50%
 - 前2 / 現在 / 次2
-- 現在字幕は色のみでハイライト
-- `max_chars=55`
+- `max_chars=65`
+- 現在字幕は色でハイライト
+
+設定変更したい場合は、`portable_config/script-ops/english-subs.conf`
 
 ## キー / マウス操作
 

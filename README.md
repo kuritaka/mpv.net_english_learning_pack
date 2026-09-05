@@ -15,8 +15,10 @@ This covers the configuration for mpv.net, a video player for Windows.
 - Video 50%
 - Subtitle panel 50%
 - Previous 2 / current / next 2
-- Current subtitle highlighted by color only
-- `max_chars=55`
+- `max_chars=65`
+- Current subtitle highlighted by color
+
+If you want to change the settings, use `portable_config/script-ops/english-subs.conf`.
 
 ## Controls
 
