@@ -18,7 +18,6 @@ This covers the configuration for mpv.net, a video player for Windows.
 - `max_chars=65`
 - Current subtitle highlighted by color
 
-If you want to change the settings, use `portable_config/script-ops/english-subs.conf`.
 
 ## Controls
 
@@ -67,11 +66,9 @@ mpv.net/
 └─ portable_config/
    ├─ mpv.conf
    ├─ input.conf
-   ├─ scripts/
-   │  ├─ english-subs.lua
-   │  └─ always-status.lua
-   └─ script-opts/
-      └─ english-subs.conf
+   └─ scripts/
+       ├─ english-subs.lua
+       └─ always-status.lua
 ```
 
 

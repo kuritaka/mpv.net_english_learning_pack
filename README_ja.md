@@ -20,7 +20,6 @@ Windowsの動画再生プレイヤーmpv.netの設定です。
 - `max_chars=65`
 - 現在字幕は色でハイライト
 
-設定変更したい場合は、`portable_config/script-ops/english-subs.conf`
 
 ## キー / マウス操作
 
@@ -76,11 +75,9 @@ mpv.net/
 └─ portable_config/
    ├─ mpv.conf
    ├─ input.conf
-   ├─ scripts/
-   │  ├─ english-subs.lua
-   │  └─ always-status.lua
-   └─ script-opts/
-      └─ english-subs.conf
+   └─ scripts/
+       ├─ english-subs.lua
+       └─ always-status.lua
 ```
 
 
